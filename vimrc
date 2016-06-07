@@ -56,7 +56,7 @@ filetype plugin indent on    " required
 """ Start nerdtree on vim startup
 """"""" autocmd vimenter * NERDTree
 """ Close window if only window left open is nerdtree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 """ map Ctrl-n to open NERDtree
 map <C-n> :NERDTreeToggle<CR>
 
