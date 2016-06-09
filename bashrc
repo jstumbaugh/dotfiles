@@ -2,15 +2,21 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+source ~/.bash/config
+source ~/.bash/aliases
+
+# Custom commands to run before setting up the default environment. Such as
+# setting TERM=xterm-256color when the emulator cannot, lame. :(
+[ -f ~/.localrc-pre ] && source ~/.localrc-pre
 
 # JASON'S COMMANDS
 # git commands
 alias g='git'
 alias gs='git status -s'
 alias gd='git diff'
-alias ga='git add'
+alias ga='git add .'
 alias gco='git checkout'
-alias gc='git commit'
+alias gc='git commit -v'
 alias gp='git push'
 alias gpo='git push origin'
 alias gdm="git branch --merged | egrep -v '\*|next|master' | xargs -L 1 -n 1 git branch --delete"

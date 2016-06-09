@@ -1,4 +1,3 @@
-
 # Remove non-alpha characters: darwin10.0 -> darwin
 OS=$(echo $OSTYPE | sed "s/[^a-zA-Z-]//g")
 
@@ -14,35 +13,11 @@ alias ..='cd ..'
 
 alias screen='screen -T $TERM'
 
-alias e="\$EDITOR"
-alias v="\$VISUAL"
+alias e="$EDITOR"
+alias v="$VISUAL"
 
 alias less="less -FrX"
 alias hi="history | tail -35"
-
-alias light="\$HOME/.bash/base16-shell/base16-solarized.light.sh"
-alias dark="\$HOME/.bash/base16-shell/base16-solarized.dark.sh"
-alias base16="\$BASE16_SHELL"
-
-# Bundler
-alias b="bundle"
-alias be="bundle exec"
-
-# foreman
-alias fr='foreman run'
-
-# git
-alias gcv='git commit -v'
-alias gd='git diff'
-alias gdc='git diff --cached'
-alias gdh='git diff HEAD'
-alias gl='git pull --ff-only'
-alias gp='git push'
-alias gpp='git pull; git push'
-alias gap='git add --patch'
-alias gadd='git add'
-alias gg='git grep'
-alias gpl='git pull'
 
 # rails
 alias tlog='tail -f log/development.log'
@@ -140,7 +115,7 @@ randpw(){ date +%s | shasum | base64 | head -c 32 ; echo; }
 # Pushover push function (for notification when running long jobs
 function push {
   : ${TITLE:="$2"}
-  : ${TITLE:="$USER@$(hostname)"}
+  : ${TITLE:="$USER"}
   curl -s -F "token=$PUSHER_TERMINAL_TOKEN" \
   -F "user=$PUSHER_USER_KEY" \
   -F "title=$TITLE" \

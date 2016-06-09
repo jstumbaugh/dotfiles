@@ -1,15 +1,20 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
-Plug 'bling/vim-airline-themes'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'chriskempson/base16-shell'
 Plug 'chriskempson/base16-vim'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --no-update-rc' }
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
+Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-rails'
+Plug 'uguu-org/vim-matrix-screensaver'
 Plug 'zaiste/tmux.vim'
 
 call plug#end()
@@ -21,7 +26,6 @@ set background=dark
 " Airline
 let g:airline#extensions#tabline#enables = 1
 "let g:airline_theme='bubblegum'
-
 
 " FZF
 map <Leader>f :FZF<CR>
@@ -49,7 +53,7 @@ if has("gui_running") || &t_Co >= 256
     set t_ut=
   endif
 else
-  colorscheme bluegreen
+  colorscheme base16-eighties
 endif
 
 
@@ -109,14 +113,16 @@ map <C-n> :NERDTreeToggle<CR>
 " show hidden files in NERDTree
 let NERDTreeShowHidden=1
 " Start NerdTree on vim start
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
 " Close NERDTree if its last window open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " }}}
 
-command! Q quit " converts ... :Q => :q
-command! W quit " converts ... :W => :w
-
+command! Q quit     " converts ... :Q => :q
+command! W quit     " converts ... :W => :w
+command! Wq wq      " converts ... :Wq => :wq
+command! Wn wn      " converts ... :Wn => :wn
+command! WN wN      " converts ... :WN => :wN
 " Move between windows {{{
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -154,6 +160,25 @@ set foldlevelstart=10   " open most folds by default to
 set foldnestmax=10      " 10 nested fold max
 " }}}
 
+" Execute Dispatch for current file
+map <Leader>d :w<CR>:Dispatch<CR>
 
+" RSpec.vim mappings
+map <Leader>t :w<CR>:call RunCurrentSpecFile()<CR>
+map <Leader>s :w<CR>:call RunNearestSpec()<CR>
+map <Leader>l :w<CR>:call RunLastSpec()<CR>
+map <Leader>a :w<CR>:call RunAllSpecs()<CR>
+
+" Setup vim-dispatch for RSpec files
+autocmd BufRead,BufNewFile *_spec.rb let g:dispatch = 'rspec %'
+
+if has("gui_macvim")
+  "don't set rspec_command"
+else
+  let g:rspec_command = "Dispatch rspec {spec}"
+endif
+
+" Matrix command map to \m
+map <Leader>m :Matrix<CR>
 
 
