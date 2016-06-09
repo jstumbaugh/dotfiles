@@ -11,10 +11,12 @@ alias gd='git diff'
 alias ga='git add'
 alias gco='git checkout'
 alias gc='git commit'
-alias gp='git pull'
+alias gp='git push'
 alias gpo='git push origin'
+alias gdm="git branch --merged | egrep -v '\*|next|master' | xargs -L 1 -n 1 git branch --delete"
 alias gf='git fetch'
-alias gcm='git commit -m'
+alias gpl='git pull'
+alias gl='git log'
 
 # bundler commands
 alias b='bundle'
