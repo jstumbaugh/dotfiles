@@ -12,7 +12,7 @@
 # Mod1 alt
 # Mod4 super
 
-set $mod Mod4
+set $mod Mod1
 
 workspace_auto_back_and_forth yes
 
@@ -234,7 +234,7 @@ bindsym Control+Mod1+L exec ~/.bin/i3lock-wrapper --dpms
 
 bindsym XF86Calculator exec gnome-calculator
 bindsym $mod+m         exec thunar
-bindsym $mod+b         exec firefox
+bindsym $mod+b         exec google-chrome
 
 # find windows class properties with `xprop` command
 
