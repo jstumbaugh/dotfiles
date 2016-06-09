@@ -42,6 +42,7 @@ alias gpp='git pull; git push'
 alias gap='git add --patch'
 alias gadd='git add'
 alias gg='git grep'
+alias gpl='git pull'
 
 # rails
 alias tlog='tail -f log/development.log'
