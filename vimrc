@@ -116,6 +116,8 @@ let NERDTreeShowHidden=1
 "autocmd vimenter * NERDTree
 " Close NERDTree if its last window open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+let g:NERDTreeMouseMode=3
 " }}}
 
 command! Q quit     " converts ... :Q => :q
@@ -164,7 +166,7 @@ set foldnestmax=10      " 10 nested fold max
 map <Leader>d :w<CR>:Dispatch<CR>
 
 " RSpec.vim mappings
-map <Leader>t :w<CR>:call RunCurrentSpecFile()<CR>
+map <Leader>c :w<CR>:call RunCurrentSpecFile()<CR>
 map <Leader>s :w<CR>:call RunNearestSpec()<CR>
 map <Leader>l :w<CR>:call RunLastSpec()<CR>
 map <Leader>a :w<CR>:call RunAllSpecs()<CR>
@@ -181,4 +183,8 @@ endif
 " Matrix command map to \m
 map <Leader>m :Matrix<CR>
 
-
+" Tabs {{{
+map <Leader>t :tabe<CR>
+nnoremap <Leader>ev :tabe $MYVIMRC<CR>
+nnoremap <Leader>rv :source $MYVIMRC<CR>
+" }}}
