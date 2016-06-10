@@ -1,11 +1,11 @@
-# Charles' Dot Files
+# Jason's Dot Files
 
 Configuration of my system the way I like it.
 
 ## Installation
 
 ```sh
-git clone https://github.com/zorab47/dotfiles ~/.dotfiles
+git clone https://github.com/jstumbaugh/dotfiles ~/.dotfiles
 ~/.dotfiles/bootstrap
 ```
 
