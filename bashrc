@@ -23,6 +23,7 @@ alias gdm="git branch --merged | egrep -v '\*|next|master' | xargs -L 1 -n 1 git
 alias gf='git fetch'
 alias gpl='git pull'
 alias gl='git l'
+alias gap='git add --patch'
 
 # bundler commands
 alias b='bundle'
