@@ -9,26 +9,6 @@ source ~/.bash/aliases
 # setting TERM=xterm-256color when the emulator cannot, lame. :(
 [ -f ~/.localrc-pre ] && source ~/.localrc-pre
 
-# JASON'S COMMANDS
-# git commands
-alias g='git'
-alias gs='git status -s'
-alias gd='git diff'
-alias ga='git add .'
-alias gco='git checkout'
-alias gc='git commit -v'
-alias gp='git push'
-alias gpo='git push origin'
-alias gdm="git branch --merged | egrep -v '\*|next|master' | xargs -L 1 -n 1 git branch --delete"
-alias gf='git fetch'
-alias gpl='git pull'
-alias gl='git l'
-alias gap='git add --patch'
-
-# bundler commands
-alias b='bundle'
-alias be='bundle exec'
-alias bers='bundle exec rails server'
 
 export PATH="$PATH:/home/jason/.bin"
 
@@ -119,7 +99,6 @@ fi
 
 # some more ls aliases
 alias ll='ls -alF'
-alias la='ls -A'
 alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:

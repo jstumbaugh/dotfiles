@@ -5,11 +5,34 @@ OS=$(echo $OSTYPE | sed "s/[^a-zA-Z-]//g")
 alias ll='ls -lF'
 alias l='ls -lF'
 alias lt='ls -ltF'
+alias la='ls -A'
 
 alias so='source ~/.bash/aliases; echo "Reloaded ~/.bash/aliases"'
 
 # cd
 alias ..='cd ..'
+
+# JASON'S COMMANDS
+# git commands
+alias g='git'
+alias gs='git status -s'
+alias gd='git diff'
+alias ga='git add .'
+alias gco='git checkout'
+alias gc='git commit -v'
+alias gp='git push'
+alias gpo='git push origin'
+alias gdm="git branch --merged | egrep -v '\*|next|master' | xargs -L 1 -n 1 git branch --delete"
+alias gf='git fetch'
+alias gpl='git pull'
+alias gl='git l'
+alias gap='git add --patch'
+alias gr='git rebase'
+
+# bundler commands
+alias b='bundle'
+alias be='bundle exec'
+alias beers='bundle exec rails server'
 
 alias screen='screen -T $TERM'
 
@@ -21,24 +44,15 @@ alias hi="history | tail -35"
 
 # rails
 alias tlog='tail -f log/development.log'
-
-# rails migration
-alias rdm='rake db:migrate db:test:prepare'
-alias rdr='rake db:rollback'
-alias migrte='rake db:migrate && rake db:rollback && rake db:migrate && rake db:test:prepare'
-alias m="migrate"
-alias rdbp="rake db:test:prepare"
+alias rc='rails console'
 
 # rake
 alias r="rake"
 
-# capistrano
-alias csd='cap staging deploy'
-
-alias open='xdg-open'
-
-# ThingM Blink
-alias blink=blink1
+# rails migration
+alias rdm='bundle exec rake db:migrate'
+alias rdr='rake db:rollback'
+alias rdbp="rake db:test:prepare"
 
 function bl {
   if [[ $# -gt 0 ]]; then
