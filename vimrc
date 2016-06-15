@@ -61,9 +61,11 @@ endif
 set backspace=indent,eol,start
 set timeoutlen=500
 " }}}
+
 " Digraphs {{{
 digraphs .. 8230              " Add digraph for ellipsis (…) mapped to '..'
 " }}}
+
 " Spaces & Tabs {{{
 set tabstop=2                 " number of visual spaces per TAB
 set softtabstop=2             " number of spaces in TAB when editing
@@ -72,6 +74,7 @@ set expandtab                 " convert tab to spaces
 set smarttab                  " smartly insert those tabs
 set shiftround                " round shifts to a multiple of shiftwidth
 " }}}
+
 " UI Config {{{
 set number                    " show line numbers
 set nowrap                    " do not wrap long lines
@@ -107,6 +110,8 @@ endif
 
 " Paste from system clipboard
 map <Leader>p :set paste<CR>o<ESC>
+" Copy to system clipboard
+map <Leader>y "+y
 
 " NerdTree {{{
 map <C-n> :NERDTreeToggle<CR>
@@ -125,6 +130,7 @@ command! W quit     " converts ... :W => :w
 command! Wq wq      " converts ... :Wq => :wq
 command! Wn wn      " converts ... :Wn => :wn
 command! WN wN      " converts ... :WN => :wN
+
 " Move between windows {{{
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -188,3 +194,10 @@ map <Leader>t :tabe<CR>
 nnoremap <Leader>ev :tabe $MYVIMRC<CR>
 nnoremap <Leader>rv :source $MYVIMRC<CR>
 " }}}
+
+" Map F5 to remove trailing whitespace
+nnoremap <silent> <F5> :let _s@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+
+" Map comments to Ctrl+/
+nmap <C-_> :Commentary<CR>
+vmap <C-_> :Commentary<CR>
