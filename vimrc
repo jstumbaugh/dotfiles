@@ -1,3 +1,4 @@
+" Plugs {{{ 
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
@@ -19,7 +20,7 @@ Plug 'uguu-org/vim-matrix-screensaver'
 Plug 'zaiste/tmux.vim'
 
 call plug#end()
-
+" }}}
 
 " Colors
 set background=dark
@@ -206,3 +207,4 @@ vmap <C-_> :Commentary<CR>
 " Map no highlighting to \h
 map <Leader>h :nohl<CR>
 
+" vim:foldmethod=marker:foldlevel=0
