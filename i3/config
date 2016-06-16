@@ -233,7 +233,7 @@ bindsym $mod+comma  workspace prev
 bindsym Control+Mod1+L exec ~/.bin/i3lock-wrapper --dpms
 
 bindsym XF86Calculator exec gnome-calculator
-bindsym $mod+m         exec thunar
+bindsym $mod+t         exec thunar
 bindsym $mod+b         exec google-chrome
 
 # find windows class properties with `xprop` command
