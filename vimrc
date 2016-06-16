@@ -202,3 +202,7 @@ nnoremap <silent> <F5> :let _s@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 " Map comments to Ctrl+/
 nmap <C-_> :Commentary<CR>
 vmap <C-_> :Commentary<CR>
+
+" Map no highlighting to \h
+map <Leader>h :nohl<CR>
+
