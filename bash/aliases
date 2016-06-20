@@ -28,11 +28,12 @@ alias gpl='git pull'
 alias gl='git l'
 alias gap='git add --patch'
 alias gr='git rebase'
+alias grc='git rebase --continue'
 
 # bundler commands
 alias b='bundle'
 alias be='bundle exec'
-alias beers='bundle exec rails server'
+alias bers='bundle exec rails server'
 
 alias screen='screen -T $TERM'
 
