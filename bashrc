@@ -9,6 +9,8 @@ source ~/.bash/aliases
 # setting TERM=xterm-256color when the emulator cannot, lame. :(
 [ -f ~/.localrc-pre ] && source ~/.localrc-pre
 
+# FZF
+[ -f ~/.fzf.bach ] && source ~/.fzf.bash
 
 export PATH="$PATH:/home/jason/.bin"
 

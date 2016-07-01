@@ -17,7 +17,7 @@ alias ..='cd ..'
 alias g='git'
 alias gs='git status -s'
 alias gd='git diff'
-alias ga='git add .'
+alias ga='git add'
 alias gco='git checkout'
 alias gc='git commit -v'
 alias gp='git push'
@@ -43,17 +43,18 @@ alias v="$VISUAL"
 alias less="less -FrX"
 alias hi="history | tail -35"
 
+# rake
+alias r="bundle exec rake"
+alias tests="bundle exec rake db:migrate; bundle exec rake db:test:prepare; bundle exec rake"
+
 # rails
 alias tlog='tail -f log/development.log'
 alias rc='rails console'
 
-# rake
-alias r="rake"
-
 # rails migration
 alias rdm='bundle exec rake db:migrate'
-alias rdr='rake db:rollback'
-alias rdbp="rake db:test:prepare"
+alias rdr='bundle exec rake db:rollback'
+alias rdtp="bundle exec rake db:test:prepare"
 
 function bl {
   if [[ $# -gt 0 ]]; then

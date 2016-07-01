@@ -107,9 +107,6 @@ set $color19  #515151
 set $color20  #a09f93
 set $color21  #e8e6df
 
-# workspace fancy names
-set $workspace9 "9 "
-
 # switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
@@ -119,7 +116,7 @@ bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace $workspace9
+bindsym $mod+9 workspace 9
 
 # scratchpad
 bindsym $mod+0       scratchpad show
