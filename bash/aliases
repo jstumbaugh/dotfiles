@@ -45,6 +45,7 @@ alias hi="history | tail -35"
 
 # rake
 alias r="bundle exec rake"
+alias rake="bundle exec rake"
 alias tests="bundle exec rake db:migrate; bundle exec rake db:test:prepare; bundle exec rake"
 
 # rails
