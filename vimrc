@@ -181,9 +181,6 @@ map <Leader>s :w<CR>:call RunNearestSpec()<CR>
 map <Leader>l :w<CR>:call RunLastSpec()<CR>
 map <Leader>a :w<CR>:call RunAllSpecs()<CR>
 
-" Setup vim-dispatch for RSpec files
-autocmd BufRead,BufNewFile *_spec.rb let g:dispatch = 'rspec %'
-
 if has("gui_macvim")
   "don't set rspec_command"
 else
@@ -209,4 +206,13 @@ vmap <C-_> :Commentary<CR>
 " Map no highlighting to \h
 map <Leader>h :nohl<CR>
 
-" vim:foldmethod=marker:foldlevel=0
+augroup vimrc
+  autocmd!
+
+  " Set .arb files to ruby
+  autocmd BufRead,BufNewFile *.arb setfiletype ruby
+
+  " Setup vim-dispatch for RSpec files
+  autocmd BufRead,BufNewFile *_spec.rb let g:dispatch = 'rspec %'
+
+augroup END
