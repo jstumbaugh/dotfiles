@@ -123,4 +123,11 @@ export LESS_TERMCAP_us=$'\E[04;38;5;5m'        # begin underline
 
 export MAKEPASSWD_CHARS="!\"#$%&\`()*,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_abcdefghijklmnopqrstuvwxyz{|}~"
 
+# set up fzf fuzzy finder
+# [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# export FZF_DEFAULT_COMMAND='ag -l -g ""'
+
+# To apply the command to CTRL-T as well
+# export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 # vim: ft=sh
