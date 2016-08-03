@@ -8,6 +8,11 @@ Plug 'chriskempson/base16-shell'
 Plug 'chriskempson/base16-vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --no-update-rc' }
+Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-indent'
+Plug 'kana/vim-textobj-line'
+Plug 'kana/vim-textobj-user'
+Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'Raimondi/delimitMate'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
@@ -18,6 +23,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
+Plug 'tpope/vim-tbone'
 Plug 'uguu-org/vim-matrix-screensaver'
 Plug 'zaiste/tmux.vim'
 
@@ -130,7 +136,7 @@ let g:NERDTreeMouseMode=3
 " }}}
 
 command! Q quit     " converts ... :Q => :q
-command! W quit     " converts ... :W => :w
+command! W w        " converts ... :W => :w
 command! Wq wq      " converts ... :Wq => :wq
 command! Wn wn      " converts ... :Wn => :wn
 command! WN wN      " converts ... :WN => :wN
