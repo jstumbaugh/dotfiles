@@ -216,7 +216,7 @@ augroup vimrc
   autocmd!
 
   " Set .arb files to ruby
-  autocmd BufRead,BufNewFile *.arb setfiletype ruby
+  autocmd BufRead,BufNewFile *.arb set filetype=ruby
 
   " Setup vim-dispatch for RSpec files
   autocmd BufRead,BufNewFile *_spec.rb let g:dispatch = 'rspec %'
