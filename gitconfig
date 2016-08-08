@@ -1,0 +1,10 @@
+[user]
+	email = jason.stumbaugh@orm-tech.com
+	name = Jason Stumbaugh
+[push]
+  default = matching
+[alias]
+  # Remove branches that have already been merged with master a.k.a. 'delete merged'
+  dm = "!git branch --merged | grep -v '\\*\\|next\\|master' | xargs --no-run-if-empty --max-args=1 git branch --delete"
+  l = log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%<(7)%aN%Cgreen%d %Creset%s' --date=short -n 20 --abbrev-commit --graph --use-mailmap
+  ll = log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%<(7)%aN%Cgreen%d %Creset%s' --date=short --abbrev-commit --graph --use-mailmap
