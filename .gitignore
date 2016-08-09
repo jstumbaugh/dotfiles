@@ -4,6 +4,9 @@ vim/.netrwhist
 vim/plugged
 vim/shada
 
+config/fish/fish_history
+config/fish/fishd.*
+
 **/doc/tags
 
 fonts/Library
