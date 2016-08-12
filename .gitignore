@@ -4,8 +4,8 @@ vim/.netrwhist
 vim/plugged
 vim/shada
 
-fish/fish_history
-fish/fishd.*
+config/fish/fish_history
+config/fish/fishd.*
 
 **/doc/tags
 
