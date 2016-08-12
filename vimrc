@@ -7,11 +7,14 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'chriskempson/base16-shell'
 Plug 'chriskempson/base16-vim'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'dag/vim-fish', { 'for': 'fish' }
+Plug 'joker1007/vim-ruby-heredoc-syntax', { 'for': 'ruby' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --no-update-rc' }
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
+Plug 'kchmck/vim-coffee-script'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'Raimondi/delimitMate'
 Plug 'rking/ag.vim'
@@ -220,5 +223,8 @@ augroup vimrc
 
   " Setup vim-dispatch for RSpec files
   autocmd BufRead,BufNewFile *_spec.rb let g:dispatch = 'rspec %'
+
+  " Set fish filetypes
+  autocmd BufRead,BufNewFile *.fish set filetype=fish
 
 augroup END
