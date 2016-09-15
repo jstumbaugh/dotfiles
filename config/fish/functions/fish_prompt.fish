@@ -39,7 +39,7 @@ function fish_prompt
   set -g __fish_git_prompt_char_upstream_behind ' ↓'
 
   # Top
-  echo -n $cyan$USER$normal: $yellow(pwd | sed -e "s|^$HOME|~|")$normal
+  echo -n $cyan$USER$normal: $yellow(prompt_pwd | sed -e "s|^$HOME|~|")$normal
   __fish_git_prompt
 
   echo
