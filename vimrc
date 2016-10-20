@@ -8,6 +8,7 @@ Plug 'chriskempson/base16-shell'
 Plug 'chriskempson/base16-vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dag/vim-fish', { 'for': 'fish' }
+Plug 'elixir-lang/vim-elixir'
 Plug 'joker1007/vim-ruby-heredoc-syntax', { 'for': 'ruby' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --no-update-rc' }
 Plug 'kana/vim-textobj-entire'
@@ -15,6 +16,7 @@ Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
 Plug 'kchmck/vim-coffee-script'
+Plug 'mattreduce/vim-mix'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'rainerborene/vim-reek'
 Plug 'rking/ag.vim'
