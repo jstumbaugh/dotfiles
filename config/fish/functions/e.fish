@@ -1,3 +1,3 @@
-function e --wraps=$EDITOR --description="Shortcut for vim"
-  eval $EDITOR $argv
+function e --description="Shortcut for vim"
+  eval vim $argv
 end

@@ -1,1 +1,1 @@
-/home/jason/.config/fisherman/fzf/conf.d/__fzf_check.fish
+/Users/jason_stumbaugh/.config/fisherman/fzf/conf.d/__fzf_check.fish

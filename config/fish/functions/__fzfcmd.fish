@@ -1,1 +1,1 @@
-/home/jason/.config/fisherman/fzf/functions/__fzfcmd.fish
+/Users/jason_stumbaugh/.config/fisherman/fzf/functions/__fzfcmd.fish

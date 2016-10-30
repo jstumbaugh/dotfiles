@@ -1,1 +1,1 @@
-/home/jason/.config/fisherman/last_job_id/last_job_id.fish
+/Users/jason_stumbaugh/.config/fisherman/last_job_id/last_job_id.fish

@@ -1,1 +1,1 @@
-/home/jason/.config/fisherman/z/conf.d/z.fish
+/Users/jason_stumbaugh/.config/fisherman/z/conf.d/z.fish

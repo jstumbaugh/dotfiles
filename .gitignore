@@ -11,3 +11,4 @@ config/dconf
 **/doc/tags
 
 fonts/Library
+*.DS_Store

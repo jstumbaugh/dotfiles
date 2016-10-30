@@ -1,1 +1,1 @@
-/home/jason/.config/fisherman/await/functions/await.fish
+/Users/jason_stumbaugh/.config/fisherman/await/functions/await.fish
