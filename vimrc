@@ -230,3 +230,5 @@ augroup vimrc
   autocmd BufRead,BufNewFile *.fish set filetype=fish
 
 augroup END
+
+set shell=bash
