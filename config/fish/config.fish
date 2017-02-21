@@ -21,12 +21,12 @@ abbr -a grc git rebase --continue
 abbr -a gs git status -s
 
 # rake
-abbr -a rdm rake db:migrate
-abbr -a rdr rake db:rollback
-abbr -a rdtp rake db:test:prepare
+abbr -a berdm bundle exec rake db:migrate
+abbr -a berdr bundle exec rake db:rollback
+abbr -a berdtp bundle exec rake db:test:prepare
 
 # rails
-abbr -a rc rails console
+abbr -a berc bundle exec rails console
 abbr -a bers bundle exec rails server -b 0.0.0.0
 
 # source each plugin file

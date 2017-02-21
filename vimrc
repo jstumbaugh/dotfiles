@@ -30,6 +30,7 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-tbone'
 Plug 'uguu-org/vim-matrix-screensaver'
+Plug 'vim-ruby/vim-ruby'
 Plug 'zaiste/tmux.vim'
 
 call plug#end()
@@ -176,6 +177,8 @@ let g:syntastic_check_on_wq = 0
 " let g:syntastic_ruby_checkers = ['rubylint', 'mri']
 " }}}
 
+" Hide reek messages when a file is saved
+let g:reek_always_show = 0
 
 " Folding {{{
 set foldenable
@@ -195,7 +198,7 @@ map <Leader>a :w<CR>:call RunAllSpecs()<CR>
 if has("gui_macvim")
   "don't set rspec_command"
 else
-  let g:rspec_command = "Dispatch rspec {spec}"
+  let g:rspec_command = "Dispatch bundle exec rspec {spec}"
 endif
 
 " Matrix command map to \m
@@ -228,5 +231,8 @@ augroup vimrc
 
   " Set fish filetypes
   autocmd BufRead,BufNewFile *.fish set filetype=fish
+
+  " Enable spellchecking for gitcommits
+  autocmd FileType gitcommit setlocal spell complete+=kspell
 
 augroup END
