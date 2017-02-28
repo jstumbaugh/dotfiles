@@ -5,35 +5,48 @@ OS=$(echo $OSTYPE | sed "s/[^a-zA-Z-]//g")
 alias ll='ls -lF'
 alias l='ls -lF'
 alias lt='ls -ltF'
-alias la='ls -A'
+alias la='ls -al'
 
 alias so='source ~/.bash/aliases; echo "Reloaded ~/.bash/aliases"'
 
-# cd
 alias ..='cd ..'
+alias c='clear'
 
-# JASON'S COMMANDS
 # git commands
 alias g='git'
-alias gs='git status -s'
-alias gd='git diff'
 alias ga='git add'
-alias gco='git checkout'
+alias gap='git add --patch'
 alias gc='git commit -v'
-alias gp='git push'
-alias gpo='git push origin'
+alias gco='git checkout'
+alias gd='git diff'
 alias gdm="git branch --merged | egrep -v '\*|next|master' | xargs -L 1 -n 1 git branch --delete"
 alias gf='git fetch'
-alias gpl='git pull'
 alias gl='git l'
-alias gap='git add --patch'
+alias gpl='git pull'
+alias gp='git push'
+alias gpo='git push origin'
 alias gr='git rebase'
 alias grc='git rebase --continue'
+alias gs='git status -s'
+alias gst='git stash'
+alias gstd='git stash drop'
 
 # bundler commands
 alias b='bundle'
 alias be='bundle exec'
-alias bers='bundle exec rails server'
+alias rake="bundle exec rake"
+
+# rails
+alias rc='rails console'
+alias berc='bundle exec rails console'
+alias bers='bundle exec rails server -b 0.0.0.0'
+alias tlog='tail -f log/development.log'
+
+# rails migration
+alias rdm='bundle exec rake db:migrate'
+alias rdr='bundle exec rake db:rollback'
+alias rdtp="bundle exec rake db:test:prepare"
+alias berdtp='bundle exec rake db:test:prepare'
 
 alias screen='screen -T $TERM'
 
@@ -43,76 +56,7 @@ alias v="$VISUAL"
 alias less="less -FrX"
 alias hi="history | tail -35"
 
-# rake
-alias r="bundle exec rake"
-alias rake="bundle exec rake"
-alias tests="bundle exec rake db:migrate; bundle exec rake db:test:prepare; bundle exec rake"
-
-# rails
-alias tlog='tail -f log/development.log'
-alias rc='rails console'
-
-# rails migration
-alias rdm='bundle exec rake db:migrate'
-alias rdr='bundle exec rake db:rollback'
-alias rdtp="bundle exec rake db:test:prepare"
-
-function bl {
-  if [[ $# -gt 0 ]]; then
-    "$@"
-
-    status=$?
-
-    light_red="C00000"
-    light_green="00C000"
-    status_color=$light_green
-
-    if [[ $status -gt 0 ]]; then
-      status_color=$light_red
-    fi
-
-    blink1 --rgb=$status_color --glimmer=5 -q &
-
-    return $status
-  else
-    blink1 --random=3 -t 300 -q && blink1 --off -q &
-  fi
-}
-
-function g {
-  if [[ $# -gt 0 ]]; then
-    git "$@"
-  else
-    git status -s
-  fi
-}
-
-function tlf {
-  if [[ $# == 0 && -f log/development.log ]]; then
-    less -FRSX +F log/development.log
-  else
-    less -FRSX +F "$@"
-  fi
-}
-
-function browse {
-  if [[ $# -gt 0 ]]; then
-    xdg-open "$@" > /dev/null 2>&1 &
-  else
-
-    if [[ -f .env ]]; then
-      port=$(grep PORT .env | cut --delimiter== --fields=2)
-
-      if [[ $port == "" ]]; then
-        port=3000
-      fi
-    fi
-
-    echo "Opening \"http://localhost:${port}\" in your browser…"
-
-    xdg-open "http://localhost:${port}" > /dev/null 2>&1 &
-  fi
-}
+alias ipynb='ipython notebook --pylab inline'
 
 # enable color support of ls and also add handy aliases
 if [ "$TERM" != "dumb" ]; then
@@ -124,7 +68,6 @@ if [ "$TERM" != "dumb" ]; then
 fi
 
 # IPython Notebook alias w/pylab support
-alias ipynb='ipython notebook --pylab inline'
 
 # Random Password Function
 randpw(){ date +%s | shasum | base64 | head -c 32 ; echo; }

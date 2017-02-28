@@ -19,6 +19,8 @@ abbr -a gpo git push origin
 abbr -a gr git rebase
 abbr -a grc git rebase --continue
 abbr -a gs git status -s
+abbr -a gst git stash
+abbr -a gstd git stash drop
 
 # rake
 abbr -a berdm bundle exec rake db:migrate

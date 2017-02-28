@@ -54,23 +54,23 @@ set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
-if has("gui_running") || &t_Co >= 256
-  let g:base16_shell_path = "~/.bash/base16-shell"
-  let base16colorspace=256  " Access colors present in 256 colorspace
-  colorscheme base16-eighties
-  set guifont=Inconsolata-g\ for\ Powerline:h11
+" if has("gui_running") || &t_Co >= 256
+"   let g:base16_shell_path = "~/.bash/base16-shell"
+"   let base16colorspace=256  " Access colors present in 256 colorspace
+"   colorscheme base16-eighties
+"   set guifont=Inconsolata-g\ for\ Powerline:h11
 
-  if &term =~ 'screen-256color' && exists('$TMUX')
-    " disable Background Color Erase (BCE) so that
-    " color schemes
-    " render properly when inside 256-tmux and GNU screen.
-    " see also
-    " http://snk.tuxfamily.org/log/vim-256color-bce.html
-    set t_ut=
-  endif
-else
-  colorscheme base16-eighties
-endif
+"   if &term =~ 'screen-256color' && exists('$TMUX')
+"     " disable Background Color Erase (BCE) so that
+"     " color schemes
+"     " render properly when inside 256-tmux and GNU screen.
+"     " see also
+"     " http://snk.tuxfamily.org/log/vim-256color-bce.html
+"     set t_ut=
+"   endif
+" else
+colorscheme base16-eighties
+" endif
 
 
 " Misc {{{
