@@ -69,6 +69,7 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 "     set t_ut=
 "   endif
 " else
+let base16colorspace=256
 colorscheme base16-eighties
 " endif
 
