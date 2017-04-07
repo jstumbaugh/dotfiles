@@ -1,0 +1,1 @@
+/home/jason/.config/fisherman/get/functions/get.fish

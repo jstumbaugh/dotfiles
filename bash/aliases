@@ -11,6 +11,7 @@ alias so='source ~/.bash/aliases; echo "Reloaded ~/.bash/aliases"'
 
 alias ..='cd ..'
 alias c='clear'
+alias psg='ps aux | grep'
 
 # git commands
 alias g='git'

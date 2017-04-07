@@ -9,6 +9,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dag/vim-fish', { 'for': 'fish' }
 Plug 'elixir-lang/vim-elixir'
+Plug 'godlygeek/tabular'
 Plug 'joker1007/vim-ruby-heredoc-syntax', { 'for': 'ruby' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --no-update-rc' }
 Plug 'kana/vim-textobj-entire'
@@ -237,3 +238,15 @@ augroup vimrc
   autocmd FileType gitcommit setlocal spell complete+=kspell
 
 augroup END
+
+set shell=/bin/bash " required for Dispatch to work in the fish shell
+
+" Tmux write
+map <Leader>w :Twrite 
+
+" Tabularize
+map <Leader>= :Tabularize /
+
+" match RuboCop's private method indentation style
+let g:ruby_index_access_modifier_style = 'indent'
+

@@ -1,3 +1,10 @@
 ### Generic Smell Configuration for reek
 
+IrresponsibleModule:
+  enabled: false
 
+TooManyMethods:
+  enabled: false
+
+NestedIterators:
+  max_allowed_nesting: 2
