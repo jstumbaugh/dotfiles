@@ -46,6 +46,7 @@ let g:airline#extensions#tabline#enables = 1
 
 " FZF
 map <Leader>f :FZF<CR>
+let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
 
 syntax enable
 
