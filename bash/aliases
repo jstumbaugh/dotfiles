@@ -59,6 +59,9 @@ alias hi="history | tail -35"
 
 alias ipynb='ipython notebook --pylab inline'
 
+alias myip="curl http://ipecho.net/plain; echo"
+alias localip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
+
 # enable color support of ls and also add handy aliases
 if [ "$TERM" != "dumb" ]; then
   if [[ $OS == "darwin" ]]; then
