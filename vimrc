@@ -177,7 +177,7 @@ let g:syntastic_check_on_open=1
 
 let g:syntastic_check_on_wq = 0
 
-" let g:syntastic_ruby_checkers = ['rubylint', 'mri']
+let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 " }}}
 
 " Hide reek messages when a file is saved

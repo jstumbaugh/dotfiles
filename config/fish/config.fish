@@ -24,21 +24,21 @@ abbr -a gst  git stash
 abbr -a gstd git stash drop
 abbr -a gstp git stash pop
 
-# rake
+# Rake
 abbr -a berdm  bundle exec rake db:migrate
 abbr -a berdr  bundle exec rake db:rollback
 abbr -a berdtp bundle exec rake db:test:prepare
 
-# rails
+# Rails
 abbr -a b    bundle
 abbr -a be   bundle exec
 abbr -a berc bundle exec rails console
 abbr -a bers bundle exec rails server
 
-# source each plugin file
+# Source each plugin file
 for file in ~/.config/fish/conf.d/*.fish
   source $file
 end
 
-# source the local varaibles file
+# Source the local varaibles file
 source ~/.localrc-pre
