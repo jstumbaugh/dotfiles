@@ -1,6 +1,7 @@
 function fish_prompt
   if not set -q __fish_prompt_char
-    set -g __fish_prompt_char »
+    set -g __fish_prompt_char '$'
+    # set -g __fish_prompt_char »
   end
 
   # Setup colors
