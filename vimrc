@@ -23,6 +23,7 @@ Plug 'rainerborene/vim-reek'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
+Plug 'shmup/vim-sql-syntax', { 'for': 'sql' }
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
@@ -201,7 +202,7 @@ map <Leader>a :w<CR>:call RunAllSpecs()<CR>
 if has("gui_macvim")
   "don't set rspec_command"
 else
-  let g:rspec_command = "Dispatch bundle exec rspec {spec}"
+  let g:rspec_command = "Dispatch bundle exec rspec --format=progress {spec}"
 endif
 
 " Matrix command map to \m
@@ -251,3 +252,5 @@ map <Leader>= :Tabularize /
 " match RuboCop's private method indentation style
 let g:ruby_index_access_modifier_style = 'indent'
 
+" Use -- as the SQL comment string
+autocmd FileType sql setlocal commentstring=--\ %s
