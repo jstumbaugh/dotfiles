@@ -17,6 +17,7 @@ Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
 Plug 'kchmck/vim-coffee-script'
+Plug 'lifepillar/pgsql.vim', { 'for': ['sql', 'pgsql', 'markdown'] }
 Plug 'mattreduce/vim-mix'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'rainerborene/vim-reek'
@@ -254,3 +255,6 @@ let g:ruby_index_access_modifier_style = 'indent'
 
 " Use -- as the SQL comment string
 autocmd FileType sql setlocal commentstring=--\ %s
+
+" Set the default SQL language
+let g:sql_type_default = 'pgsql'
