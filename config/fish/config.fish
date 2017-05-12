@@ -33,7 +33,7 @@ abbr -a berdtp bundle exec rake db:test:prepare
 abbr -a b    bundle
 abbr -a be   bundle exec
 abbr -a berc bundle exec rails console
-abbr -a bers bundle exec rails server
+abbr -a bers bundle exec rails server -b 0.0.0.0
 
 # Source each plugin file
 for file in ~/.config/fish/conf.d/*.fish
