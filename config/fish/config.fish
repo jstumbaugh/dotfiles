@@ -17,8 +17,10 @@ abbr -a gpl  git pull
 abbr -a gp   git push
 abbr -a gpo  git push origin
 abbr -a gr   git rebase
+abbr -a grn  git rebase next
 abbr -a grc  git rebase --continue
-abbr -a grh  git reset HEAD~
+abbr -a grs  git reset
+abbr -a grsh git reset HEAD~
 abbr -a gs   git status --short
 abbr -a gst  git stash
 abbr -a gstd git stash drop
@@ -35,6 +37,11 @@ abbr -a be   bundle exec
 abbr -a berc bundle exec rails console
 abbr -a bers bundle exec rails server -b 0.0.0.0
 
+# Tmux
+abbr -a t   tmux
+abbr -a td  tmux detach
+abbr -a tls tmux ls
+
 # Source each plugin file
 for file in ~/.config/fish/conf.d/*.fish
   source $file
@@ -42,3 +49,6 @@ end
 
 # Source the local varaibles file
 source ~/.localrc-pre
+
+# ORM specific abbreviations
+source ~/.orm-abbrs.fish

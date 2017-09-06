@@ -1,4 +1,4 @@
-" Plugs {{{ 
+" Plugs {{{
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
@@ -11,6 +11,7 @@ Plug 'dag/vim-fish', { 'for': 'fish' }
 Plug 'elixir-lang/vim-elixir'
 Plug 'godlygeek/tabular'
 Plug 'joker1007/vim-ruby-heredoc-syntax', { 'for': 'ruby' }
+Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --no-update-rc' }
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-indent'
@@ -18,6 +19,7 @@ Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
 Plug 'kchmck/vim-coffee-script'
 Plug 'lifepillar/pgsql.vim', { 'for': ['sql', 'pgsql', 'markdown'] }
+Plug 'lifepillar/vim-cheat40'
 Plug 'mattreduce/vim-mix'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'rainerborene/vim-reek'
@@ -34,6 +36,7 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-tbone'
 Plug 'uguu-org/vim-matrix-screensaver'
 Plug 'vim-ruby/vim-ruby'
+Plug 'vimwiki/vimwiki'
 Plug 'zaiste/tmux.vim'
 
 call plug#end()
@@ -237,8 +240,10 @@ augroup vimrc
   " Set fish filetypes
   autocmd BufRead,BufNewFile *.fish set filetype=fish
 
-  " Enable spellchecking for gitcommits
+  " Enable spellchecking for gitcommits, vimWiki, and markdown files
   autocmd FileType gitcommit setlocal spell complete+=kspell
+  autocmd FileType vimwiki setlocal spell complete+=kspell
+  autocmd FileType markdown setlocal spell complete+=kspell
 
 augroup END
 
@@ -258,3 +263,6 @@ autocmd FileType sql setlocal commentstring=--\ %s
 
 " Set the default SQL language
 let g:sql_type_default = 'pgsql'
+
+" VimWiki
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.wiki'}]
