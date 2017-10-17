@@ -2,8 +2,8 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
+Plug 'beloglazov/vim-online-thesaurus', { 'on': 'Thesaurus' }
 Plug 'bling/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'chriskempson/base16-shell'
 Plug 'chriskempson/base16-vim'
 Plug 'christoomey/vim-tmux-navigator'
@@ -13,6 +13,7 @@ Plug 'godlygeek/tabular'
 Plug 'joker1007/vim-ruby-heredoc-syntax', { 'for': 'ruby' }
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --no-update-rc' }
+Plug 'junegunn/limelight.vim'
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-line'
@@ -35,7 +36,8 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-tbone'
 Plug 'uguu-org/vim-matrix-screensaver'
-Plug 'vim-ruby/vim-ruby'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-ruby/vim-ruby', { 'commit': '84565856e6965144e1c34105e03a7a7e87401acb' }
 Plug 'vimwiki/vimwiki'
 Plug 'zaiste/tmux.vim'
 
