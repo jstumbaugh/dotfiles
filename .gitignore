@@ -3,6 +3,7 @@
 vim/.netrwhist
 vim/plugged
 vim/shada
+vim/undodir
 
 config/fish/fish_history
 config/fish/fishd.*
