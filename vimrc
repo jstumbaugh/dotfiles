@@ -34,6 +34,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
+Plug 'tpope/vim-surround'
 Plug 'tpope/vim-tbone'
 Plug 'uguu-org/vim-matrix-screensaver'
 Plug 'vim-airline/vim-airline-themes'
@@ -43,6 +44,9 @@ Plug 'zaiste/tmux.vim'
 
 call plug#end()
 " }}}
+
+" Set the leader to a space
+let mapleader = " "
 
 " Colors
 set background=dark
@@ -103,6 +107,7 @@ set shiftround                " round shifts to a multiple of shiftwidth
 
 " UI Config {{{
 set number                    " show line numbers
+set relativenumber            " relative numbers
 set nowrap                    " do not wrap long lines
 set showcmd                   " display incomplete commands
 set cursorline                " highlights row with cursor
@@ -272,3 +277,7 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.wiki
 " set an undofile for persistent undo across sessions
 set undofile
 set undodir=~/.vim/undodir
+
+" Set Cheat40 to not use the default cheat sheet
+" let g:cheat40_use_default = 0
+
