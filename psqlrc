@@ -23,7 +23,7 @@
 
 -- Use best available output format
 --\x auto -- turn off expanded display
-\set VERBOSITY verbose
+--\set VERBOSITY verbose
 
 -- show the word "NULL" if no value
 \pset null 'NULL'
