@@ -252,6 +252,9 @@ augroup vimrc
   autocmd FileType vimwiki setlocal spell complete+=kspell
   autocmd FileType markdown setlocal spell complete+=kspell
 
+  " Format json files correctly
+  autocmd FileType json set formatprg=python\ -mjson.tool
+
 augroup END
 
 set shell=/bin/bash " required for Dispatch to work in the fish shell
@@ -281,3 +284,5 @@ set undodir=~/.vim/undodir
 " Set Cheat40 to not use the default cheat sheet
 " let g:cheat40_use_default = 0
 
+" Disable Ex mode
+nnoremap Q <Nop>

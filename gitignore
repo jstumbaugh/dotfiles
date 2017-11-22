@@ -4,3 +4,4 @@
 .env
 .rake_tasks~
 *.swp
+vendor/bundle/*

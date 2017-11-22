@@ -10,3 +10,5 @@
   ll = log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%<(7)%aN%Cgreen%d %Creset%s' --date=short --abbrev-commit --graph --use-mailmap
   # Git push set upstream (initial push to remote)
   pup = "!git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)"
+[core]
+  excludesFile = ~/.gitignore
