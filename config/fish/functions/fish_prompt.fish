@@ -5,14 +5,14 @@ function fish_prompt
   end
 
   # Setup colors
-  set -l normal (set_color normal)
-  set -l cyan (set_color cyan)
-  set -l yellow (set_color yellow)
+  set -l normal  (set_color normal)
+  set -l cyan    (set_color cyan)
+  set -l yellow  (set_color yellow)
   set -l bpurple (set_color -o purple)
-  set -l bred (set_color -o red)
-  set -l bcyan (set_color -o cyan)
-  set -l bwhite (set_color -o white)
-  set -l bgreen (set_color -o green)
+  set -l bred    (set_color -o red)
+  set -l bcyan   (set_color -o cyan)
+  set -l bwhite  (set_color -o white)
+  set -l bgreen  (set_color -o green)
 
   # Configure __fish_git_prompt
   set -g __fish_git_prompt_show_informative_status true
