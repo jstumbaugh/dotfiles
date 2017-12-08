@@ -24,6 +24,7 @@ Plug 'lifepillar/vim-cheat40'
 Plug 'mattreduce/vim-mix'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'rainerborene/vim-reek'
+Plug 'rhysd/devdocs.vim'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
@@ -286,3 +287,7 @@ set undodir=~/.vim/undodir
 
 " Disable Ex mode
 nnoremap Q <Nop>
+
+" DevDocs command
+let g:devdocs_filetype_map = { 'ruby': 'rails' }
+nmap K <Plug>(devdocs-under-cursor)
