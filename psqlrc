@@ -35,5 +35,5 @@
 -- \echo '\t\t\t:dbsize\t\t-- Database Size'
 -- \echo '\t\t\t:tablesize\t-- Tables Size'
 
-\set dbsize 'SELECT datname AS db_name, pg_size_pretty(pg_database_size(datname)) db_size FROM pg_database ORDER BY db_size;'
+\set dbsize 'SELECT datname AS db_name, pg_size_pretty(pg_database_size(datname)) db_size FROM pg_database ORDER BY pg_database_size(datname) DESC;'
 \set tablesize 'SELECT nspname || \'.\' || relname AS \"relation\", pg_size_pretty(pg_relation_size(C.oid)) AS "size" FROM pg_class C LEFT JOIN pg_namespace N ON (N.oid = C.relnamespace) WHERE nspname NOT IN (\'pg_catalog\', \'information_schema\') ORDER BY pg_relation_size(C.oid) DESC LIMIT 40;'

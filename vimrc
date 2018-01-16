@@ -276,7 +276,7 @@ autocmd FileType sql setlocal commentstring=--\ %s
 let g:sql_type_default = 'pgsql'
 
 " VimWiki
-let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.wiki'}]
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
 
 " set an undofile for persistent undo across sessions
 set undofile

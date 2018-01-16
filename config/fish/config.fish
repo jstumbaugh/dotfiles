@@ -60,6 +60,8 @@ status --is-interactive; and source (rbenv init -|psub)
 set --export RBENV_VERSION 2.3.5
 
 # ToDo
-abbr -a todo e ~/vimwiki/work/todo.wiki
+abbr -a todo e ~/vimwiki/work/todo.md
 
 abbr -a fssh "eval (ssh-agent -c); and ssh-add"
+
+abbr -a dbsize "psql postgres -c 'SELECT datname AS db_name, pg_size_pretty(pg_database_size(datname)) db_size FROM pg_database ORDER BY pg_database_size(datname) DESC;'"
