@@ -46,9 +46,10 @@ fc-cache -fv  # update font caches
 - brice
 - hirb
 - looksee
+- hookup
 
 ```
-gem install awesome_print brice hirb looksee
+gem install awesome_print brice hirb looksee hookup
 ```
 
 ## Sources
