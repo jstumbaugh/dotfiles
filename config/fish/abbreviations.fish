@@ -33,6 +33,8 @@ abbr -a be   bundle exec
 abbr -a berc bundle exec rails console
 abbr -a bers bundle exec rails server -b 0.0.0.0
 
+abbr -a cutlog "rm log/development.log; and touch log/development.log"
+
 # Tmux
 abbr -a t   tmux
 abbr -a td  tmux detach

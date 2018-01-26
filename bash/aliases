@@ -51,6 +51,8 @@ alias rdr='bundle exec rake db:rollback'
 alias rdtp="bundle exec rake db:test:prepare"
 alias berdtp='bundle exec rake db:test:prepare'
 
+alias cutlog='rm log/development.log && touch log/development.log'
+
 alias screen='screen -T $TERM'
 
 alias e="$EDITOR"
