@@ -32,6 +32,7 @@ abbr -a b    bundle
 abbr -a be   bundle exec
 abbr -a berc bundle exec rails console
 abbr -a bers bundle exec rails server -b 0.0.0.0
+abbr -a befs bundle exec foreman start
 
 abbr -a cutlog "rm log/development.log; and touch log/development.log"
 
@@ -48,3 +49,5 @@ abbr -a fssh "eval (ssh-agent -c); and ssh-add"
 
 # Postgres Database Sizes
 abbr -a dbsize "psql postgres -c 'SELECT datname AS db_name, pg_size_pretty(pg_database_size(datname)) db_size FROM pg_database ORDER BY pg_database_size(datname) DESC;'"
+
+abbr -a sfu slack file upload

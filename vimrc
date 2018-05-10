@@ -293,4 +293,4 @@ let g:devdocs_filetype_map = { 'ruby': 'rails' }
 nmap K <Plug>(devdocs-under-cursor)
 
 " Prepare the test database
-map <Leader>pp :Dispatch bundle exec rake db:test:prepare<CR>
+map <Leader>pt :Dispatch bundle exec rake db:test:prepare<CR>
