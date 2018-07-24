@@ -23,6 +23,7 @@ Plug 'lifepillar/pgsql.vim', { 'for': ['sql', 'pgsql', 'markdown'] }
 Plug 'lifepillar/vim-cheat40'
 Plug 'mattreduce/vim-mix'
 Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'pbrisbin/vim-mkdir'
 Plug 'rainerborene/vim-reek'
 Plug 'reedes/vim-pencil'
 Plug 'rhysd/devdocs.vim'
