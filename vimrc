@@ -26,6 +26,7 @@ Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'rainerborene/vim-reek'
 Plug 'reedes/vim-pencil'
+Plug 'reedes/vim-wordy'
 Plug 'rhysd/devdocs.vim'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
@@ -308,3 +309,8 @@ imap jj <Esc>
 
 " Set vim-pencil text width
 let g:pencil#textwidth = 80
+
+" vim-wordy
+" map ctrl w to Wordy
+map <C-y> :Wordy weak<CR>
+map <C-p> :NoWordy<CR>
