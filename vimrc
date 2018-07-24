@@ -263,7 +263,7 @@ augroup vimrc
   autocmd BufRead /tmp/jrnl* setlocal filetype=markdown sidescrolloff=0
 
   " Enable vim-pencil for Markdown files
-  autocmd FileType markdown,mkd,md call pencil#init()
+  autocmd FileType markdown,mkd,md call pencil#init({'wrap': 'soft'})
 
 augroup END
 
