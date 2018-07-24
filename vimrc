@@ -24,6 +24,7 @@ Plug 'lifepillar/vim-cheat40'
 Plug 'mattreduce/vim-mix'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'rainerborene/vim-reek'
+Plug 'reedes/vim-pencil'
 Plug 'rhysd/devdocs.vim'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
@@ -157,8 +158,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let g:NERDTreeMouseMode=3
 " }}}
 
-command! Q quit     " converts ... :Q => :q
-command! W w        " converts ... :W => :w
+command! Q quit     " converts ... :Q  => :q
+command! W w        " converts ... :W  => :w
 command! Wq wq      " converts ... :Wq => :wq
 command! Wn wn      " converts ... :Wn => :wn
 command! WN wN      " converts ... :WN => :wN
@@ -233,7 +234,7 @@ nnoremap <silent> <F5> :let _s@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 nmap <C-_> :Commentary<CR>
 vmap <C-_> :Commentary<CR>
 
-" Map no highlighting to \h
+" Remove highlights
 map <Leader>h :nohl<CR>
 
 augroup vimrc
@@ -255,6 +256,12 @@ augroup vimrc
 
   " Format json files correctly
   autocmd FileType json set formatprg=python\ -mjson.tool
+
+  " jrnl entries as markdown
+  autocmd BufRead /tmp/jrnl* setlocal filetype=markdown sidescrolloff=0
+
+  " Enable vim-pencil for Markdown files
+  autocmd FileType markdown,mkd,md call pencil#init()
 
 augroup END
 
@@ -294,3 +301,9 @@ nmap K <Plug>(devdocs-under-cursor)
 
 " Prepare the test database
 map <Leader>pt :Dispatch bundle exec rake db:test:prepare<CR>
+
+" Map jj to the Escape key to avoid using it
+imap jj <Esc>
+
+" Set vim-pencil text width
+let g:pencil#textwidth = 80
