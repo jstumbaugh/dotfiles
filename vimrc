@@ -292,7 +292,7 @@ set undofile
 set undodir=~/.vim/undodir
 
 " Set Cheat40 to not use the default cheat sheet
-" let g:cheat40_use_default = 0
+let g:cheat40_use_default = 0 " Default will look at ~/.config/nvim/cheat40.txt
 
 " Disable Ex mode
 nnoremap Q <Nop>
