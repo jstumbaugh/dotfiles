@@ -49,5 +49,6 @@ abbr -a fssh "eval (ssh-agent -c); and ssh-add"
 
 # Postgres Database Sizes
 abbr -a dbsize "psql postgres -c 'SELECT datname AS db_name, pg_size_pretty(pg_database_size(datname)) db_size FROM pg_database ORDER BY pg_database_size(datname) DESC;'"
+abbr -a active "psql postgres -c 'SELECT pid, datname AS database, now() - query_start AS time_running, query FROM pg_stat_activity WHERE datname IS NOT NULL AND query NOT LIKE \'SELECT pid, datname%\';'"
 
 abbr -a sfu slack file upload
