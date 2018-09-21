@@ -1,4 +1,9 @@
 Press q to dismiss, <Tab> to lose focus
+Personal Notes {{{
+Open cheat 40 with       <Leader>?     N
+Open fold                l             N
+Close all open folds     zM            N
+}}}
 About {{{2
   Abbreviations used in descriptions:
 

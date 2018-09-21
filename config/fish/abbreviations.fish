@@ -16,6 +16,7 @@ abbr -a grc  git rebase --continue
 abbr -a grn  git rebase next
 abbr -a grs  git reset
 abbr -a grsh git reset HEAD~
+abbr -a grsp git reset --patch
 abbr -a gs   git status --short
 abbr -a gst  git stash
 abbr -a gstd git stash drop
@@ -41,7 +42,8 @@ abbr -a t   tmux
 abbr -a td  tmux detach
 abbr -a tls tmux ls
 
-# ToDo
+# VimWiki
+abbr -a ww e ~/vimwiki/index.md
 abbr -a todo e ~/vimwiki/work/todo.md
 
 # Fuck SSH

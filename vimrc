@@ -263,7 +263,7 @@ augroup vimrc
   autocmd BufRead /tmp/jrnl* setlocal filetype=markdown sidescrolloff=0
 
   " Enable vim-pencil for Markdown files
-  autocmd FileType markdown,mkd,md call pencil#init({'wrap': 'soft'})
+  " autocmd FileType markdown,mkd,md call pencil#init({'wrap': 'soft'})
 
 augroup END
 
@@ -305,10 +305,10 @@ nmap K <Plug>(devdocs-under-cursor)
 map <Leader>pt :Dispatch bundle exec rake db:test:prepare<CR>
 
 " Map jj to the Escape key to avoid using it
-imap jj <Esc>
+" imap jj <Esc>
 
 " Set vim-pencil text width
-let g:pencil#textwidth = 80
+" let g:pencil#textwidth = 80
 
 " vim-wordy
 " map ctrl w to Wordy
