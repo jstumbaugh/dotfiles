@@ -136,6 +136,10 @@ set showmode                  " Show current mode in the modeline
 set ruler                     " Show line and column number
 filetype plugin indent on     " load filetype-specific indent and plugin files
 
+" Case insensitive search unless there are capital letters
+set ignorecase
+set smartcase
+
 set mouse=a                   " enable mouse
 
 if exists('+colorcolumn')
