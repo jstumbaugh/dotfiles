@@ -33,6 +33,8 @@ alias gs='git status -s'
 alias gst='git stash'
 alias gstd='git stash drop'
 
+alias gpom='git push origin master'
+
 # bundler commands
 alias b='bundle'
 alias be='bundle exec'
