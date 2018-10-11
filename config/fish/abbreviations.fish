@@ -29,11 +29,11 @@ abbr -a berdr  bundle exec rake db:rollback
 abbr -a berdtp bundle exec rake db:test:prepare
 
 # Rails
-abbr -a b    bundle
-abbr -a be   bundle exec
-abbr -a berc bundle exec rails console
-abbr -a bers bundle exec rails server -b 0.0.0.0
-abbr -a befs bundle exec foreman start
+abbr -a b     bundle
+abbr -a be    bundle exec
+abbr -a berc  bundle exec rails console
+abbr -a bers  bundle exec rails server -b 0.0.0.0
+abbr -a bersa bundle exec rails server -b 0.0.0.0 -p 3001
 
 abbr -a cutlog "rm log/development.log; and touch log/development.log"
 
