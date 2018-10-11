@@ -12,3 +12,4 @@ config/dconf
 **/doc/tags
 
 fonts/Library
+*.uuid
