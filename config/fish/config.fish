@@ -14,9 +14,5 @@ source ~/.localrc-pre
 # ORM specific abbreviations
 source ~/.orm-abbrs.fish
 
-# rbenv support
-set PATH $HOME/.rbenv/bin $PATH
-set PATH $HOME/.rbenv/shims $PATH
-status --is-interactive; and source (rbenv init -|psub)
-# rbenv rehash >/dev/null ^&1
-set --export RBENV_VERSION 2.3.5
+# ASDF
+source ~/.asdf/asdf.fish
