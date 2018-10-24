@@ -1,6 +1,7 @@
 # set no greeting
 set fish_greeting
 
+# Source my abbreviations
 source ~/.config/fish/abbreviations.fish
 
 # Source each plugin file
@@ -14,5 +15,5 @@ source ~/.localrc-pre
 # ORM specific abbreviations
 source ~/.orm-abbrs.fish
 
-# ASDF
+# Use ASDF as a version manager
 source ~/.asdf/asdf.fish
