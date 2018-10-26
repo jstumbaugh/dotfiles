@@ -17,3 +17,6 @@ source ~/.orm-abbrs.fish
 
 # Use ASDF as a version manager
 source ~/.asdf/asdf.fish
+
+# Auto-start the SSH Agent on starting a shell
+source ~/.config/fish/autostart_ssh_agent.fish
